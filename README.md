@@ -1,1 +1,9 @@
-# osTicket-Ticket-Lifecycle
+# osTicket - Ticket Lifecycle
+
+## Overview
+
+### Environments and Technologies Used
+
+### Skills Learned
+
+## Walk-through
