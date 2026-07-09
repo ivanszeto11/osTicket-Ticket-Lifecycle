@@ -131,11 +131,13 @@ Now we will go through the Assignment and Investigation stage of the ticket life
   <img width="933" height="613" alt="osticket-support-14" src="https://github.com/user-attachments/assets/c1b7010f-dc1d-4519-96fe-d70f1b16f76a" />
 </p>
 
-We will communicate to the ticket owner that we have 
+We will communicate to the ticket owner that we are restarting the server and advise them to try accessing the online portal again in 10 minutes. We are in the Resolution stage of the ticket lifecycle. Let's pretend that we have successfully restarted the banking system server. We have provided a solution to the user's issue and notified them, so we just need to wait for confirmation from the user that they are satisfied with the resolution. 
 
 <p align="center">
   <img width="643" height="221" alt="osticket-support-15" src="https://github.com/user-attachments/assets/96fe04e4-5a36-4dcc-a53e-b01882492161" />
 </p>
+
+The last stage is Ticket Closure. Once the ticket owner confirms that the issue is fixed, we can change the ticket's status to "Closed". Let's make a note of the resolution and the user's confirmation. 
 
 ### Creating a Ticket as an Agent 
 
@@ -143,18 +145,38 @@ We will communicate to the ticket owner that we have
   <img width="954" height="341" alt="osticket-support-16" src="https://github.com/user-attachments/assets/89830e63-b6a2-42a8-9201-c737e03700ff" />
 </p>
 
+We are back on the John Doe account and we will be creating a new ticket as a help desk agent this time. Under the Tickets tab, we will click **New Ticket**.
+
 <p align="center">
   <img width="643" height="388" alt="osticket-support-17" src="https://github.com/user-attachments/assets/c7a35305-7ca1-4cba-b511-58e225c27b25" />
 </p>
+
+The new ticket will need a ticket owner. We can select an existing user in the system or create a new user by providing a name and email address. For this ticket, let's use the existing user, Ken.  
+
+Let's say Ken calls us and reports an inability to print from his computer to the office printer. He tells us that print jobs show up in the print queue, then disappear after a few seconds, and he has tried printing from multiple applications.
 
 <p align="center">
   <img width="951" height="772" alt="osticket-support-18" src="https://github.com/user-attachments/assets/53f14840-d2a9-4d93-9b66-6c25e1d3898e" />
 </p>
 
+We will create a ticket for Ken's issue. In this scenario, the Ticket Creation and Triage and Prioritization stages blend together. We have received the user's report and while creating the ticket, we are also assessing the issue and deciding the properties of the ticket.  
+
+Because Ken called us, the Ticket Source will be "Phone". The Help Topic will be "Report a Problem / Personal Computer Issues" since Ken is having a problem with his computer. This ticket will go to the Support department since they are equipped to solve the printing issue. We will set the SLA Plan to Sev-C, the lowest severity, because the issue only affects one person's computer and they can print from another computer as a temporary workaround. We can assign this ticket to ourselves.  
+
+In the ticket details, we will write the subject of the ticket in the issue summary and describe the issue in the message body. 
+
 <p align="center">
   <img width="940" height="591" alt="osticket-support-19" src="https://github.com/user-attachments/assets/0d151397-3727-40b3-a94e-5b2ec25e1bf5" />
 </p>
 
+After creating the ticket, we will work on it. This is the Assignment and Investigation stage. While we are on the phone with Ken, we can ask clarifying questions to learn more about the situation. For example, we can ask if the issue is isolated to his computer or if people around him are having similar issues. In this case, his computer is the only one affected. We can also ask him to confirm that the printer is online. Once we gather enough information, we can form a theory about the root cause of the problem. When print jobs disappear from the print queue without printing, there is likely a problem with the Print Spooler service.  
+
+The next stage is Resolution. We have an idea of what the cause of the issue is, so we can test a solution. If the cause of the issue is Print Spooler, we should have Ken restart the service. We will guide him through the steps to restart Print Spooler and have him try printing from his computer again. After restarting the Print Spooler service, he confirms that he is able to print from his computer.  
+
+We communicated over the phone, so we will not post a reply to the ticket, but we can write an internal note to document our process of troubleshooting the issue. It is useful to have a record of the steps we took that we can refer back to in the future.
+
 <p align="center">
   <img width="643" height="220" alt="osticket-support-20" src="https://github.com/user-attachments/assets/fa0630e3-f36a-41f0-9d6a-ff28f822ebf9" />
 </p>
+
+The last step is to close the ticket. We provided a solution and confirmed that the issue was fixed, so we can change the ticket status to "Closed". We can leave a brief note explaining that the ticket is being closed because the cause was identified and a successful solution was found. 
