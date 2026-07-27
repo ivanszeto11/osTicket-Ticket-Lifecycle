@@ -6,6 +6,8 @@
 
 ## Overview
 
+This project explores the ticket lifecycle from the creation of a help desk ticket to its resolution. Using the ticketing system, osTicket, we will work through the stages of the ticket lifecycle to resolve two tickets that simulate real-world help desk scenarios.
+
 ### Environments and Technologies Used
 - Microsoft Azure (Virtual Machines)
 - Remote Desktop Connection
