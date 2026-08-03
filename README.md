@@ -6,7 +6,7 @@
 
 ## Overview
 
-This project explores the ticket lifecycle from the creation of a help desk ticket to its resolution. Using the ticketing system, osTicket, we will work through the stages of the ticket lifecycle to resolve two tickets that simulate real-world help desk scenarios.
+This project explores the ticket lifecycle of help desk tickets and the anatomy of tickets in osTicket. Using osTicket, we will work through the stages of the ticket lifecycle to resolve two tickets that simulate real-world help desk scenarios.
 
 ### Environments and Technologies Used
 - Microsoft Azure (Virtual Machines)
@@ -33,7 +33,7 @@ This project explores the ticket lifecycle from the creation of a help desk tick
 
 In this lab, we will explore the stages of the ticket lifecycle by working through two sample tickets. First, we will create a ticket as an end user and work it to completion as an agent. Then, we will create another ticket as a help desk agent and resolve it. 
 
-### Creating a Ticket as the End-User
+### Ticket Creation as the End-User
 
 <p align="center">
   <img width="838" height="360" alt="osticket-support-1" src="https://github.com/user-attachments/assets/3b14ac5c-8ecb-4817-93d4-c3a23024b63a" />
@@ -45,17 +45,19 @@ The image above shows the user portal in osTicket. This is where users can creat
   <img width="831" height="892" alt="osticket-support-2" src="https://github.com/user-attachments/assets/e481db38-96b8-40dd-88c0-9a4cd780c528" />
 </p>
 
-In order to create a ticket, the user must provide their name and email address. The email address will be linked with the user account and used to contact the user. For the lab, we will use the name "Ken" along with a fake email address. There is also the option to provide a phone number, but we will leave that blank.  
+In order to create a ticket, the user must provide their name and email address. The email address will be linked with the user account and used to contact the user. For the lab, we will use the name "Ken" along with a fake email address.
 
-Next, we have to select a Help Topic for the ticket. This identifies what type of issue the ticket is for and allows the ticket to be routed to the Department that handles that specific topic. Let's select "General Inquiry / Other" as the Help Topic.  
+Next, we have to select a Help Topic for the ticket. This identifies the type of issue the ticket is for and allows the ticket to be routed to the Department that handles that specific topic. Let's select "General Inquiry / Other" as the Help Topic.  
 
-The Ticket Details section is where we will describe the issue. Let's say the problem is that nobody in our banking department can access the online banking system, meaning they are unable to do any work. In the Issue Summary, we will give a brief description of the problem; this is like the subject line of an email. In the body of the message, we will describe the issue in more detail. Once this information is provided, we will click **Create Ticket**. We have just finished the Ticket Creation stage of the ticket lifecycle.
+The Ticket Details section is where we will describe the issue. Let's say the problem is that nobody in our banking department can access the online banking system, meaning they are unable to do any work. In the Issue Summary, we will give a brief description of the problem; this is like the subject line of an email. In the body of the message, we will describe the issue in more detail. Once this information is provided, we will click **Create Ticket**.
+
+### Triage and Prioritization
 
 <p align="center">
   <img width="955" height="374" alt="osticket-support-3" src="https://github.com/user-attachments/assets/8073b9c7-87c6-4f6a-8316-654b42790bdc" />
 </p>
 
-Now, we will log in as a help desk agent, John Doe. In our ticket queue, we can see the ticket that we have just created. The ticket queue shows the ticket number, the timestamp of the ticket's last update, the subject line, the user who the ticket belongs to, the priority level, and the agent assigned to the ticket. Note that the issue summary we previously submitted appears in the subject column and the ticket is from Ken. We can open the ticket by clicking on the ticket number or the subject.
+Now, we will log in as a help desk agent, John Doe. In our ticket queue, we can see the ticket that we have just created. The ticket queue shows the ticket number, the timestamp of the ticket's last update, the subject line, the user who the ticket belongs to, the priority level, and the agent assigned to the ticket. We can open the ticket by clicking the ticket number or the subject.
 
 <p align="center">
   <img width="953" height="616" alt="osticket-support-4" src="https://github.com/user-attachments/assets/416fe614-ed2c-4109-9451-77c5f79eed2e" />
@@ -63,9 +65,7 @@ Now, we will log in as a help desk agent, John Doe. In our ticket queue, we can 
 
 When we open the ticket, we will see the ticket header, containing the ticket properties, at the top. Most of these properties, including Status, Priority, Department, Assignee, and SLA Plan, are automatically set according to the Help Topic's configurations. Notice that the ticket was sent to the Support department. We can see this ticket because our account (John Doe) is part of the Support department.  
 
-Below that is the ticket thread. The ticket thread displays all of the replies between the user and the agents, internal notes, and updates to ticket properties. Currently, the only thing in the ticket thread is the original message sent when the user created the ticket. From the message, we understand that the entire banking department is unable to access the online banking portal.  
-  
-We are now in the Triage and Prioritization stage. This is where we perform an initial assessment of the ticket and gather information to determine the issue's severity and the appropriate person or team to resolve the issue.
+Below that is the ticket thread. The ticket thread displays all of the replies between the user and the agents, internal notes, and updates to ticket properties. Currently, the only thing in the ticket thread is the original message sent when the user created the ticket. From the message, we understand that the entire banking department is unable to access the online banking portal. 
 
 <p align="center">
   <img width="939" height="613" alt="osticket-support-5" src="https://github.com/user-attachments/assets/9af14421-531b-4b59-9793-6a7b6fa44c31" />
@@ -93,13 +93,15 @@ First, let's change the Help Topic. It is possible for users to select the wrong
   <img width="641" height="248" alt="osticket-support-8" src="https://github.com/user-attachments/assets/277c5f6e-5900-4dfe-b9f5-2e2219ea9220" />
 </p>
 
-Next is the Priority Level. The Priority Level signals to agents which tickets they should respond to first. Categorizing priority will often differ based on organizational policies, but is typically based on business impact. Since the issue affects a large number of people and blocks business operations, we will change the Priority Level to "Emergency". We can leave an optional note that we are changing the Priority Level because the issue is business critical.
+Next is the Priority Level. The Priority Level signals to agents which tickets they should respond to first. Since the issue affects a large number of people and blocks business operations, we will change the Priority Level to "Emergency". We can leave an optional note that we are changing the Priority Level because the issue is business critical.
 
 <p align="center">
   <img width="641" height="248" alt="osticket-support-9" src="https://github.com/user-attachments/assets/520bea0b-4170-4a11-928e-16f2a0b10cc2" />
 </p>
 
-The SLA Plan usually goes hand in hand with the Priority Level. It also indicates the urgency with which the ticket should be handled and determines how much time is allowed to pass before the ticket is overdue. We will change the SLA Plan to Sev-A, the highest severity, and note that the update is being made because the issue is business critical.
+The SLA Plan usually goes hand in hand with the Priority Level. It also indicates the urgency with which the ticket should be handled and determines how much time is allowed to pass before the ticket is overdue. We will change the SLA Plan to Sev-A, the highest severity, and note that this update is being made because the issue is business critical.
+
+### Assignment and Investigation
 
 <p align="center">
   <img width="643" height="287" alt="osticket-support-10" src="https://github.com/user-attachments/assets/6e2ee862-caa8-46cb-8c58-8c393479eeb9" />
@@ -111,7 +113,7 @@ Next, we will change the Assignee from ourselves to a member of the SysAdmins de
   <img width="643" height="272" alt="osticket-support-11" src="https://github.com/user-attachments/assets/a96cf683-20ff-4e88-b3a0-07dfa4fa86fe" />
 </p>
 
-Lastly, we will change the Department to SysAdmins, giving access to agents that specialize in system outages. We can write a note to explain why the change is being made.  
+Lastly, we will change the Department to SysAdmins, giving access to agents that specialize in system outages. 
   
 **Note:** We change this property last because it will affect our access to the ticket.
 
@@ -127,7 +129,9 @@ After we change the Department, we are sent back to our ticket queue with a noti
 
 Let's sign out of the John Doe account and log in to Jane Doe's account. We will see Ken's ticket in the ticket queue since Jane is in the SysAdmins department.  
 
-Now we will go through the Assignment and Investigation stage of the ticket lifecycle. We have been assigned the ticket as Jane, and we will look into the cause of the issue. Since the entire online banking system is down, we should check the server that hosts the website. Let's say we check the server and find that it is unresponsive. We should restart the server to clear the memory and terminate any hung processes, and see if that fixes the issue. 
+We have been assigned the ticket as Jane, and we will look into the cause of the issue. Since the entire online banking system is down, we should check the server that hosts the website. Let's say we check the server and find that it is unresponsive. We should restart the server to clear the memory and terminate any hung processes, and see if that fixes the issue. 
+
+### Resolution
 
 <p align="center">
   <img width="933" height="613" alt="osticket-support-14" src="https://github.com/user-attachments/assets/c1b7010f-dc1d-4519-96fe-d70f1b16f76a" />
@@ -135,13 +139,15 @@ Now we will go through the Assignment and Investigation stage of the ticket life
 
 We will communicate to the ticket owner that we are restarting the server and advise them to try accessing the online portal again in 10 minutes. We are in the Resolution stage of the ticket lifecycle. Let's pretend that we have successfully restarted the banking system server. We have provided a solution to the user's issue and notified them, so we just need to wait for confirmation from the user that they are satisfied with the resolution. 
 
+### Ticket Closure
+
 <p align="center">
   <img width="643" height="221" alt="osticket-support-15" src="https://github.com/user-attachments/assets/96fe04e4-5a36-4dcc-a53e-b01882492161" />
 </p>
 
-The last stage is Ticket Closure. Once the ticket owner confirms that the issue is fixed, we can change the ticket's status to "Closed". Let's make a note of the resolution and the user's confirmation. 
+Once the ticket owner confirms that the issue is fixed, we can change the ticket's status to "Closed". Let's make a note of the resolution and the user's confirmation. 
 
-### Creating a Ticket as an Agent 
+### Ticket Creation as an Agent 
 
 <p align="center">
   <img width="954" height="341" alt="osticket-support-16" src="https://github.com/user-attachments/assets/89830e63-b6a2-42a8-9201-c737e03700ff" />
@@ -157,25 +163,33 @@ The new ticket will need a ticket owner. We can select an existing user in the s
 
 Let's say Ken calls us and reports an inability to print from his computer to the office printer. He tells us that print jobs show up in the print queue, then disappear after a few seconds, and he has tried printing from multiple applications.
 
+### Triage and Prioritization
+
 <p align="center">
   <img width="951" height="772" alt="osticket-support-18" src="https://github.com/user-attachments/assets/53f14840-d2a9-4d93-9b66-6c25e1d3898e" />
 </p>
 
-We will create a ticket for Ken's issue. In this scenario, the Ticket Creation and Triage and Prioritization stages blend together. We have received the user's report and while creating the ticket, we are also assessing the issue and deciding the properties of the ticket.  
+In this scenario, the Ticket Creation and Triage and Prioritization stages blend together. We have received the user's report and while creating the ticket, we are also assessing the issue and deciding the properties of the ticket.  
 
 Because Ken called us, the Ticket Source will be "Phone". The Help Topic will be "Report a Problem / Personal Computer Issues" since Ken is having a problem with his computer. This ticket will go to the Support department since they are equipped to solve the printing issue. We will set the SLA Plan to Sev-C, the lowest severity, because the issue only affects one person's computer and they can print from another computer as a temporary workaround. We can assign this ticket to ourselves.  
 
 In the ticket details, we will write the subject of the ticket in the issue summary and describe the issue in the message body. 
 
+### Assignment and Investigation
+
+After creating the ticket and assigning it to ourselves, we will work on it. While we are on the phone with Ken, we can ask clarifying questions to learn more about the situation. For example, we can ask if the issue is isolated to his computer or if people around him are having similar issues. In this case, his computer is the only one affected. We can also ask him to confirm that the printer is online. Once we gather enough information, we can form a theory about the root cause of the problem. When print jobs disappear from the print queue without printing, there is likely a problem with the Print Spooler service.  
+
+### Resolution
+
 <p align="center">
   <img width="940" height="591" alt="osticket-support-19" src="https://github.com/user-attachments/assets/0d151397-3727-40b3-a94e-5b2ec25e1bf5" />
 </p>
 
-After creating the ticket, we will work on it. This is the Assignment and Investigation stage. While we are on the phone with Ken, we can ask clarifying questions to learn more about the situation. For example, we can ask if the issue is isolated to his computer or if people around him are having similar issues. In this case, his computer is the only one affected. We can also ask him to confirm that the printer is online. Once we gather enough information, we can form a theory about the root cause of the problem. When print jobs disappear from the print queue without printing, there is likely a problem with the Print Spooler service.  
-
-The next stage is Resolution. We have an idea of what the cause of the issue is, so we can test a solution. If the cause of the issue is Print Spooler, we should have Ken restart the service. We will guide him through the steps to restart Print Spooler and have him try printing from his computer again. After restarting the Print Spooler service, he confirms that he is able to print from his computer.  
+We have an idea of what the cause of the issue is, so we can test a solution. If the cause of the issue is Print Spooler, we should have Ken restart the service. We will guide him through the steps to restart Print Spooler and have him try printing from his computer again. After restarting the Print Spooler service, he confirms that he is able to print from his computer.  
 
 We communicated over the phone, so we will not post a reply to the ticket, but we can write an internal note to document our process of troubleshooting the issue. It is useful to have a record of the steps we took that we can refer back to in the future.
+
+### Ticket Closure
 
 <p align="center">
   <img width="643" height="220" alt="osticket-support-20" src="https://github.com/user-attachments/assets/fa0630e3-f36a-41f0-9d6a-ff28f822ebf9" />
